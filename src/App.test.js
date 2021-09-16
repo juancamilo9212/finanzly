@@ -23,7 +23,7 @@ describe('App', () => {
             wrapper.find('input').at(0).simulate('change', { target : { value : "Energia"}});
             wrapper.find('input').at(1).simulate('change', { target : { value : 150}});
             wrapper.find('form').simulate('submit', { preventDefault : prevent });
-            wrapper.find('button').at(1).simulate('click');
+            wrapper.find('button').at(2).simulate('click');
             const [a, ...rest] = reducer.mock.calls;
             expect(rest).toEqual(
                 [
@@ -37,9 +37,6 @@ describe('App', () => {
                 ]
                 ]
             )
-            
-            
-            
 });
     });
     
